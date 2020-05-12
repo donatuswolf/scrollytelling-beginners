@@ -2,7 +2,7 @@
   --spacing: 2rem;
   --color-white: #fff;
   --color-black: #120c25;
-  --color-accent: #ee00aa;
+  --color-accent: #50C9C3;
   --max-width: 768px;
 }
 
@@ -103,11 +103,12 @@ article {
   margin: 20vh 0;
 }
 
-.step.my-custom-paragraph {
-  align-self: flex-end; /*this control the block alignment*/
+.step5 {
+  align-self: flex-end;
+
 }
 
-.my-custom-paragraph strong {
+.step5 strong {
   color: red;
 }
 
@@ -137,8 +138,8 @@ figure svg {
   top: 0;
 }
 
-figure circle {
-  fill: yellow;
+figure svg circle {
+  background-color: #ff9a9e;
 }
 
 svg rect.bg {

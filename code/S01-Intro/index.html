@@ -34,8 +34,10 @@
 
       <section class="scrolly">
         <figure ref="figure">
+          <img  v-if="step >= 3" src="../assets/images/beach.jpg"/>
           <svg :width="width" :height="height">
             <rect class="bg" :width="width * progress" :height="height" />
+            <circle v-if="step > 2" :r="height / 3" :cx="width / 2" :cy="height / 2" />
             <text class="step" :y="height / 2" dy="0.35em" :x="width / 2">{{ step }}</text>
           </svg>
         </figure>
@@ -73,6 +75,12 @@
               Und so war dieser Park, der wie kein anderer den Kindern offen scheint, auch sonst für mich mit
               Schwierigem, Undurchführbarem verstellt. Wie selten unterschied ich die Fische im Goldfischteich. Wie viel
               versprach die Hofjägerallee mit ihrem Namen und wie wenig hielt sie.
+            </p>
+          </div>
+          <div class="step step5">
+            <p>
+              <strong>Klimagerechtigkeit → </strong>
+              Klimagerechtigkeit
             </p>
           </div>
         </article>
