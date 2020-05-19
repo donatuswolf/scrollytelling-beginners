@@ -33,10 +33,28 @@
       </section>
 
       <section class="scrolly">
+        <!-- <figure ref="figure">
+          <svg :width="width" :height="height">
+            <text :x="width / 2" dy="2em"> Chart Title </text>
+            <g :transform="`translate(${margin} ${margin})`">
+              <line :x1="0" :x2="innerWidth" :y1="innerHeight" :y2="innerHeight" />
+              <line :x1="2" :x2="innerWidth" :y1="5" :y2="5" />
+            </g>
+          </svg>
+        </figure> -->
         <figure ref="figure">
           <svg :width="width" :height="height">
             <text :x="width / 2" dy="2em"> Chart Title </text>
             <g :transform="`translate(${margin} ${margin})`">
+              <g v-for="(bar, i) in data" :key="`bar-${i}`" :transform="`translate(${barWidth * (i + 0.5)} 0)`">
+                <rect x="-10" :y="0" width="20" :height="innerHeight" />
+                <text x="0" :y="0" dy="-0.5em">
+                  {{ bar.price }}
+                </text>
+                <text x="0" :y="innerHeight" dy="1.5em">
+                  {{ bar.city }}
+                </text>
+              </g>
               <line :x1="0" :x2="innerWidth" :y1="innerHeight" :y2="innerHeight"/>
             </g>
           </svg>
